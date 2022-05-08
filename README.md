@@ -1,21 +1,18 @@
 # Multiformatter
 
-Formats with multiple code formatters on language specific file save. 
-
+Formats with multiple code formatters on language specific file save. This extension only activates when you save with ctrl+s (cmd+s on mac).
 
 ## Requirements
 
-I do recommend having these settings off to avoid annoyances:
+Having a .vscode/settings.json on each workspace with language specific configurations. This is an example:
+
+![](https://i.imgur.com/aamyr2R.png)
+
+I do recommend having this setting off to avoid annoyances:
 
 ```
-"editor.formatOnSave": false,
-"files.autoSave": "off",
+"editor.formatOnSave": false
 ```
-
-Also having a .vscode/settings.json on each workspace with language specific configurations. This is an example:
-
-![](https://i.imgur.com/n9gRSKz.png)
-
 
 ## Extension Settings
 
@@ -28,7 +25,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-When vscode autosave is on, it becomes annoying.
+When vscode format on save is on, it becomes very annoying.
 
 ## Release Notes
 
