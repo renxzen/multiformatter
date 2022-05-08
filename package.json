@@ -2,15 +2,40 @@
 	"name": "multiformatter",
 	"displayName": "Multiformatter",
 	"description": "Formats with multiple language specific code formatters on file save",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.67.0"
 	},
+	"publisher": "renxzen",
+	"bugs": {
+		"url": "https://github.com/renxzen/multiformatter/issues"
+	},
+	"homepage": "https://github.com/renxzen/multiformatter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/renxzen/multiformatter.git"
+	},
+	"author": {
+		"name": "Renzo Mondragón"
+	},
+	"icon": "ico/ico.ico",
+	"galleryBanner": {
+		"color": "#272822",
+		"theme": "dark"
+	},
 	"categories": [
-		"Programming Languages"
+		"Formatters"
+	],
+	"keywords": [
+		"multi",
+		"formatter",
+		"multiformatter",
+		"format",
+		"two",
+		"renxzen"
 	],
 	"activationEvents": [
-		"onCommand:multiformatter.multiformat"
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
