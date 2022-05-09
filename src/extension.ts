@@ -11,48 +11,44 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand(
 		"multiformatter.multiformat",
 		() => {
-			const doc = vscode.window.activeTextEditor?.document!;
-
-			if (
-				!savingState &&
-				doc.languageId === extConfig.get("language") &&
-				extConfig.get("enabled")
-			) {
-				savingState = true;
-
-				config
-					.update(
-						"editor.defaultFormatter",
-						extConfig.get("formatter1")
-					)
-					.then(() => {
-						vscode.commands
-							.executeCommand("editor.action.formatDocument")
-							.then(() => {
-								config
-									.update(
-										"editor.defaultFormatter",
-										extConfig.get("formatter2")
-									)
-									.then(() => {
-										vscode.commands
-											.executeCommand(
-												"editor.action.formatDocument"
-											)
-											.then(() => {
-												doc.save().then(() => {
-													savingState = false;
-												});
-											});
-									});
-							});
-					});
-			}
+			// const doc = vscode.window.activeTextEditor?.document!;
+			// removed
 		}
 	);
 
 	vscode.workspace.onDidSaveTextDocument((doc) => {
-		// deprecated
+		if (
+			!savingState &&
+			doc.languageId === extConfig.get("language") &&
+			extConfig.get("enabled")
+		) {
+			savingState = true;
+
+			config
+				.update("editor.defaultFormatter", extConfig.get("formatter1"))
+				.then(() => {
+					vscode.commands
+						.executeCommand("editor.action.formatDocument")
+						.then(() => {
+							config
+								.update(
+									"editor.defaultFormatter",
+									extConfig.get("formatter2")
+								)
+								.then(() => {
+									vscode.commands
+										.executeCommand(
+											"editor.action.formatDocument"
+										)
+										.then(() => {
+											doc.save().then(() => {
+												savingState = false;
+											});
+										});
+								});
+						});
+				});
+		}
 	});
 
 	context.subscriptions.push(disposable);

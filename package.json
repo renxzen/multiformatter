@@ -2,7 +2,7 @@
 	"name": "multiformatter",
 	"displayName": "Multiformatter",
 	"description": "Formats with multiple language specific code formatters on file save",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.67.0"
 	},
@@ -43,13 +43,6 @@
 			{
 				"command": "multiformatter.multiformat",
 				"title": "Multiformat"
-			}
-		],
-		"keybindings": [
-			{
-				"command": "multiformatter.multiformat",
-				"key": "ctrl+s",
-				"mac": "cmd+s"
 			}
 		],
 		"configuration": {

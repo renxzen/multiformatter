@@ -8,9 +8,10 @@ Having a .vscode/settings.json on each workspace with language specific configur
 
 ![](https://i.imgur.com/aamyr2R.png)
 
-I do recommend having this setting off to avoid annoyances:
+I do recommend having these settings off to avoid annoyances:
 
 ```
+"files.autoSave": "off",
 "editor.formatOnSave": false
 ```
 
@@ -25,7 +26,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-When vscode format on save is on, it becomes very annoying.
+When vscode autosave is on, it runs infinitely lmao.
 
 ## Release Notes
 
