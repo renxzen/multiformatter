@@ -4,16 +4,17 @@ Formats with multiple code formatters on language specific file save. This exten
 
 ## Requirements
 
-Having a .vscode/settings.json on each workspace with language specific configurations. This is an example:
-
-![](https://i.imgur.com/aamyr2R.png)
-
 I do recommend having these settings off to avoid annoyances:
 
 ```
 "files.autoSave": "off",
 "editor.formatOnSave": false
 ```
+
+Having a .vscode/settings.json on each workspace with language specific configurations would be ideal. This is an example:
+
+![](https://i.imgur.com/gqFnXim.png)
+
 
 ## Extension Settings
 
